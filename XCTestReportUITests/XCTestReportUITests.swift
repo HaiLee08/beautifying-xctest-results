@@ -14,13 +14,15 @@ final class XCTestReportUITests: XCTestCase {
     override func setUp() {
         app.launch()
     }
-    
+
+    /// #1 Test Passed
     func testWillPass() {
         app.images["gamecontroller"].tap()
         let username = app.staticTexts["username"].label
         XCTAssertNotEqual("", username)
     }
-    
+
+    /// #5 Test Failed
     func testWillFail() {
         app.images["gamecontroller"].tap()
         let actualUsername = app.staticTexts["username"].label
